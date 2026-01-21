@@ -2,7 +2,7 @@
 require 'db.php';
 require 'session.php';
 
-/* Logout */
+
 if (isset($_POST['logout'])) {
     session_unset();
     session_destroy();
@@ -10,7 +10,7 @@ if (isset($_POST['logout'])) {
     exit;
 }
 
-/* Auth check */
+
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
     exit;
